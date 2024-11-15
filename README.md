@@ -13,7 +13,7 @@
   <p align="center">
     For Rapo, 포라포는 라포 형성의 고민을 덜어줄 아이스브레이킹/레크레이션 솔루션입니다.
         <br />
-            <a href="https://github.com/Club-PARD/Record_ON_BE/blob/main/README.md"><strong>Explore the docs »</strong></a>
+            <a href="https://github.com/4th-PARD-WEB-PART/shortkathon?tab=readme-ov-file"><strong>Explore the docs »</strong></a>
         <br />
     <br />
   </p>
@@ -99,7 +99,3 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <br>
-
-<!— Footer banner —>
-
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:C40C0C,10:F73E09FF,30:FF6500,75:ffaa00,100:FF8A08&height=40&section=footer&text=&fontSize=0" width="100%"/>
