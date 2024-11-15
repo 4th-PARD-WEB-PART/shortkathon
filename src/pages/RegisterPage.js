@@ -1,14 +1,14 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom';
 import Logo from '../img/Logo.png';
 import { Container, LogoImage, InputContainer, Input, ButtonContainer, RegisterButton, LoginButton } from './LoginPage'; // LoginPage의 스타일 컴포넌트 가져오기
 
 const RegisterPage = () => {
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate(); 
 
-  // Function to navigate to the login page
+
   const handleLoginClick = () => {
-    navigate('/login'); // Navigate to the /login route
+    navigate('/login'); 
   };
 
   return (
