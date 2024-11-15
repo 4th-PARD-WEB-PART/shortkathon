@@ -1,19 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import Logo from '../img/Logo.png'; // Logo 이미지 import
+import { useNavigate } from 'react-router-dom';
 
-const LoginPage = () => {
-  const navigate = useNavigate(); // Initialize useNavigate
+const LoginPage = ({ isLoggedin, setIsLoggedin }) => {
+  const navigate = useNavigate();
 
-  // Function to navigate to the register page
-  const handleRegisterClick = () => {
-    navigate('/register'); // Navigate to the /register route
+  // Function to handle login button click
+  const handleLoggedIn = () => {
+    alert("로그인 완료");
+    navigate("/main");
   };
 
-  // Function to navigate to the home page ("/") on login
-  const handleLoginClick = () => {
-    navigate('/'); // Navigate to the home route
+  // Function to handle register button click
+  const handleRegisterClick = () => {
+    navigate("/register");
   };
 
   return (
@@ -25,7 +26,7 @@ const LoginPage = () => {
       </InputContainer>
       <ButtonContainer>
         <RegisterButton onClick={handleRegisterClick}>회원가입</RegisterButton>
-        <LoginButton onClick={handleLoginClick}>로그인</LoginButton>
+        <LoginButton onClick={handleLoggedIn}>로그인</LoginButton>
       </ButtonContainer>
     </Container>
   );
@@ -54,6 +55,7 @@ export const LogoImage = styled.img`
   width: 673px;
   height: 125px;
   margin-bottom: 12px;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0); 
 `;
 
 export const Input = styled.input`

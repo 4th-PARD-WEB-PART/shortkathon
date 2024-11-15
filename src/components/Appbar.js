@@ -3,6 +3,7 @@ import { Navigate, Outlet, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import LogoImg from "../img/logo_2.png"
 import SearchImg from "../img/search.png"
+import userImg from "../img/userImage.png"
 
 function Appbar({ isLoggedin, setIsLoggedin }) {
   const navigator = useNavigate();
@@ -14,12 +15,13 @@ function Appbar({ isLoggedin, setIsLoggedin }) {
     navigator("/login");
   };
 
-  const [inputValue,setInputValue] = useState('');
+  const [checkLoggin, setCheckLoggin] = useState(!isLoggedin);
+  const [inputValue, setInputValue] = useState('');
 
   return (<div>
     <Title1>
       <Logo src={LogoImg} onClick={handleHomePage} />
-      <SubTitle2 onClick={handleLoggedIn}>로그인</SubTitle2>
+        <SubTitle2 onClick={handleLoggedIn}>로그인</SubTitle2>
     </Title1>
     <Title2>
       <SearchBox
@@ -28,7 +30,7 @@ function Appbar({ isLoggedin, setIsLoggedin }) {
         placeholder="어떤 라포형성을 찾으시나요?"
         icon={SearchImg}
         value={inputValue}
-        onChange={(e)=> setInputValue(e.target.value)}
+        onChange={(e) => setInputValue(e.target.value)}
       />
     </Title2>
     <main>
@@ -46,6 +48,10 @@ align-items: center;
 position: fixed; /* 화면에 고정 */
 left: 0; /* 오른쪽에 위치 */
 top: 0%; /* 상단에 위치 */
+background-color: white;
+border: 1px solid #CDCDCD;
+/* border-left: 4px solid #CDCDCD; */
+/* border-right: 10px solid #CDCDCD; */
 `;
 
 
@@ -84,7 +90,8 @@ align-items: center;
 position: fixed; /* 화면에 고정 */
 left: 0; /* 오른쪽에 위치 */
 top: 80px; /* 상단에 위치 */
-
+background-color: white;
+border-top: 1px solid #CDCDCD;
 `;
 
 export const SearchBox = styled.input`
@@ -112,6 +119,18 @@ background-repeat: no-repeat; /* 이미지 반복 방지 */
 
 export const Logo = styled.img`
 margin-left: 105px;
+`;
+
+export const UserBox = styled.div`
+display: flex;
+font-size:20px;
+align-items: center; /* 수직 중앙 정렬 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  gap: 10px;  // 이미지와 텍스트 사이 간격
+  margin-right: 105px;
+`;
+
+export const UserProfile = styled.img`
 `;
 
 export default Appbar;

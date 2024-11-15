@@ -1,7 +1,7 @@
 import axios from "axios";
 
 //경로 지정
-const server = "http://localhost:8081";
+const server = "http://172.18.157.81:8081";
 
 //user get 메소드
 export const getUserAPI = async (userId) => { //
@@ -16,9 +16,10 @@ export const getUserAPI = async (userId) => { //
 };
 
 //user post 메소드
-export const userMemberAPI = async (data) => {
+export const postUserAPI = async (data) => {
     try {
         // axois 사용해 추가하려는 데이터 담아 서버로 보냄
+        console.log(data);
         const response = await axios.post(`${server}/user`, data);
         return response;
     } catch (error) {

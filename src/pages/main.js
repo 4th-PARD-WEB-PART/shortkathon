@@ -1,4 +1,3 @@
-// Main.js
 import React from 'react';
 import Appbar from '../components/Appbar';
 import Card from '../components/Card';
